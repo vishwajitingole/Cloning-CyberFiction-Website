@@ -2,6 +2,7 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    font-family: gilroy;
 }
 
 html,
@@ -16,35 +17,37 @@ body {
 }
 
 #page {
+    position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(255, 255, 255);
 }
 
 #page1 {
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(53, 197, 20);
+    background-color: rgb(255, 255, 255);
 }
 
 #page2 {
+    position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(233, 29, 29);
+    background-color: rgb(255, 255, 255);
 }
 
 #page3 {
+    position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(41, 28, 223);
+    background-color: rgb(255, 255, 255);
 }
 
 canvas {
     max-width: 100vw;
     max-height: 100vh;
-    position: absolute;
-    z-index: 9;
+    position: relative;
+    z-index: 10;
 }
 
 .loop {
@@ -53,7 +56,6 @@ canvas {
     top: 30%;
     height: 25%;
     width: 100%;
-    background-color: rgb(255, 255, 255);
     font-size: 100px;
     white-space: nowrap;
     font-family: gilroy;
@@ -80,4 +82,106 @@ canvas {
     100% {
         transform: translateX(-100%);
     }
+}
+
+#nav {
+    position: fixed;
+    height: 7%;
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+}
+
+#nav>h3 {
+    font-family: gilroy;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+#nav>button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: black;
+    color: #ffff;
+    font-family: Gilroy;
+    cursor: pointer;
+}
+
+.page__left {
+    position: absolute;
+    top: 60%;
+    font-family: gilroy;
+    font-weight: 400;
+    color: grey;
+    left: 10%;
+    padding: 10px;
+}
+
+.page__right {
+    position: absolute;
+    top: 70%;
+    font-weight: 500;
+    color: grey;
+    right: 10%;
+    font-size: 240%;
+}
+
+.page1__left {
+    position: absolute;
+    top: 20%;
+    font-weight: 400;
+    left: 6%;
+}
+
+.page1__left>h3 {
+    color: grey;
+}
+
+.page1__left>h1 {
+    line-height: 1.3;
+}
+
+.page1__right {
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    text-align: end;
+}
+
+.page1__right>h3 {
+    color: grey;
+}
+
+.page2__left {
+    position: relative;
+    top: 25%;
+    left: 10%;
+}
+
+.page2__left>h3 {
+    color: grey;
+}
+
+.page2__right>h1 {
+    position: absolute;
+    top: 60%;
+    right: 7%;
+    font-size: medium;
+    text-align: end;
+    text-transform: uppercase;
+}
+
+.text3 {
+    position: absolute;
+    text-transform: uppercase;
+    top: 40%;
+    right: 10%;
+}
+
+.text3>h3 {
+    color: grey;
 }
